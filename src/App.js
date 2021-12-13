@@ -4,6 +4,7 @@ import { FaAngleDoubleRight } from 'react-icons/fa';
 import Title from './Title';
 
 const url = 'https://course-api.com/react-tabs-project';
+const jobUrl = 'https://www.google.pt/search?q=';
 function App() {
 	const { loading, error, data } = useFetch(url);
 	const [value, setValue] = useState(0);
@@ -50,6 +51,9 @@ function App() {
 						);
 					})}
 				</div>
+				<a className='btn' href={jobUrl + title.replace(/\s+/g, '')}>
+					More Info
+				</a>
 			</article>
 		</main>
 	);
